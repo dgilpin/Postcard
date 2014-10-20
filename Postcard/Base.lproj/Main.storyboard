@@ -22,13 +22,13 @@
                                     <rect key="frame" x="324" y="72" width="60" height="40"/>
                                 </variation>
                             </imageView>
-                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NAV-t0-ROl" userLabel="messageLabel">
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Message" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NAV-t0-ROl" userLabel="messageLabel">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="16" y="81" width="309" height="137"/>
+                                    <rect key="frame" x="16" y="114" width="309" height="104"/>
                                 </variation>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="To:" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LFX-Fr-nkT" userLabel="To:">
@@ -61,6 +61,15 @@
                                     <action selector="sendButtonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Q5T-gv-3Pg"/>
                                 </connections>
                             </button>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eXv-fP-fzT" userLabel="To Label">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="16" y="72" width="300" height="21"/>
+                                </variation>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <variation key="default">
@@ -70,6 +79,7 @@
                                 <exclude reference="LFX-Fr-nkT"/>
                                 <exclude reference="SaI-vN-k6o"/>
                                 <exclude reference="H1T-Eo-TJw"/>
+                                <exclude reference="eXv-fP-fzT"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -79,6 +89,7 @@
                                 <include reference="LFX-Fr-nkT"/>
                                 <include reference="SaI-vN-k6o"/>
                                 <include reference="H1T-Eo-TJw"/>
+                                <include reference="eXv-fP-fzT"/>
                             </mask>
                         </variation>
                     </view>
@@ -87,7 +98,8 @@
                         <outlet property="messageLabel" destination="NAV-t0-ROl" id="koR-MI-IHy"/>
                         <outlet property="messageTextField" destination="SaI-vN-k6o" id="CUr-N5-xQd"/>
                         <outlet property="sendButton" destination="H1T-Eo-TJw" id="7Jb-yg-ser"/>
-                        <outlet property="toTextLabel" destination="LFX-Fr-nkT" id="ZfY-BH-aCO"/>
+                        <outlet property="toLabel" destination="eXv-fP-fzT" id="VZE-5N-lU1"/>
+                        <outlet property="toTextField" destination="LFX-Fr-nkT" id="GO9-M5-sdG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>

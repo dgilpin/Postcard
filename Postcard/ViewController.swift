@@ -11,7 +11,8 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var messageLabel: UILabel!
-    @IBOutlet weak var toTextLabel: UITextField!
+    @IBOutlet weak var toLabel: UILabel!
+    @IBOutlet weak var toTextField: UITextField!
     @IBOutlet weak var messageTextField: UITextField!
     @IBOutlet weak var sendButton: UIButton!
     
@@ -28,11 +29,21 @@ class ViewController: UIViewController {
     }
 
     @IBAction func sendButtonPressed(sender: UIButton) {
+        //set up To label
+        toLabel.textColor = UIColor.blueColor()
+        toLabel.text = toTextField.text
+        toLabel.hidden = false
+        toTextField.text = ""
+        toTextField.resignFirstResponder()
+        
+        //set up message label
         messageLabel.textColor = UIColor.redColor()
         messageLabel.text = messageTextField.text
         messageLabel.hidden = false
         messageTextField.text = ""
         messageTextField.resignFirstResponder()
+        
+        //reset button for feedback
         sendButton.setTitle("Message sent", forState: UIControlState.Normal)
     }
 
